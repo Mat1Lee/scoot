@@ -107,6 +107,10 @@
   font-weight: 400;
   line-height: normal;
 }
+.login-form__options-forgot.resend a {
+  font-size: 14px;
+  letter-spacing: 0.7px;
+}
 .login-form__btn-group {
   display: flex;
   flex-direction: row;
@@ -174,6 +178,7 @@
   width: 100%;
   color: white;
   background-color: #11ACC1;
+  margin-top: 34px;
 }
 
 #error {
@@ -350,15 +355,56 @@ label {
 .sidebar .nav-menu ul .nav-item.active a i:not(.arrow) {
   color: #00a6ca;
 }
-@media screen and (max-width: 768px) {
-  .sidebar {
-    width: 80px;
-  }
+
+.burger-menu {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1000;
+  }
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  .main-content {
+    margin-left: 0;
+  }
+  .burger-menu {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 1100;
+    color: #333;
+  }
+  /* Optional overlay */
+  .sidebar-overlay {
+    content: "";
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+  }
+  .sidebar-overlay.active {
+    display: block;
+  }
+}
 .app-container {
   display: flex;
   height: 100vh;
+  background: var(--Pastel-Blue, #E8F8F8);
 }
 
 .main-content {
@@ -662,7 +708,7 @@ label {
 }
 
 .dropdown-item .el-val {
-  font-weight: 600;
+  font-weight: 400;
   margin-right: 10px;
   color: #44424B;
 }
@@ -686,17 +732,23 @@ label {
   border-collapse: collapse;
 }
 .user-table th, .user-table td {
-  padding: 16px;
+  padding: 15px;
   text-align: left;
   font-family: "Roboto";
+  color: #44424B;
   border-bottom: 1px solid #e1e1e1;
 }
 .user-table th {
-  font-weight: 600;
-  color: #00a6ca;
+  color: var(--Primary, #11ACC1);
+  /* H3 */
+  font-family: "Roboto";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .user-table tbody tr:hover {
-  background-color: rgba(0, 166, 202, 0.05);
+  background-color: #E8F8F8;
 }
 .user-table tbody tr:nth-child(even) {
   background-color: #E8F8F8;
@@ -707,6 +759,7 @@ label {
 .user-table .checkbox-column {
   width: 40px;
   text-align: center;
+  padding-right: 5px;
 }
 .user-table .actions-column {
   width: 100px;
@@ -743,6 +796,7 @@ label {
 }
 .user-table .toggle input:checked + .slider:before {
   transform: translateX(24px);
+  background-color: #00a6ca;
 }
 .user-table .toggle .slider {
   position: absolute;
@@ -750,6 +804,7 @@ label {
   top: 0;
   left: 0;
   right: 0;
+  height: 16px;
   bottom: 0;
   background-color: #bdc3c7;
   transition: 0.3s;
@@ -758,20 +813,25 @@ label {
 .user-table .toggle .slider:before {
   position: absolute;
   content: "";
-  height: 16px;
-  width: 16px;
-  left: 4px;
-  bottom: 4px;
-  background-color: #fff;
+  height: 24px;
+  width: 24px;
+  left: 0px;
+  bottom: -3px;
+  border: 0.2px solid white;
+  background-color: #bdc3c7;
   transition: 0.3s;
   border-radius: 50%;
+}
+.user-table input[type=checkbox] {
+  width: 18px;
+  height: 18px;
 }
 
 .table-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 16px;
+  padding-top: 15px;
   border-top: 1px solid #e1e1e1;
 }
 .table-footer .items-per-page {
@@ -812,6 +872,42 @@ label {
   border-color: #00a6ca;
 }
 
+.model-confirm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.model-confirm__content {
+  display: flex;
+  width: 490px;
+  padding: 34px;
+  flex-direction: column;
+  gap: 34px;
+  background: #F8F8F8;
+}
+.model-confirm__content h2 {
+  text-align: center;
+  margin: 0;
+}
+.model-confirm__content .model-btn {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+.model-confirm__content #user-info {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
 .main-content__top {
   display: flex;
   justify-content: space-between;
@@ -822,6 +918,11 @@ label {
   display: flex;
   justify-content: space-between;
   gap: 25px;
+}
+
+* {
+  font-family: "Roboto";
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

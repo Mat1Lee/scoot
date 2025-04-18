@@ -181,7 +181,55 @@ $transition-speed: 0.3s;
             }
         }
     }
-    @media screen and (max-width:768px){
-        width: 80px;
-    }
+
+  
+}
+.burger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+@media screen and (max-width:768px){
+    .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        top: 0;
+        left: 0;
+    
+        height: 100vh;
+        z-index: 1000;
+      }
+    
+      .sidebar.active {
+        transform: translateX(0);
+      }
+    
+      .main-content {
+        margin-left: 0;
+      }
+    
+      .burger-menu {
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        z-index: 1100;
+        color: #333;
+      }
+    
+      /* Optional overlay */
+      .sidebar-overlay {
+        content: "";
+        display: none;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 900;
+      }
+    
+      .sidebar-overlay.active {
+        display: block;
+      }
 }

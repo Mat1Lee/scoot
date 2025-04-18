@@ -4,4 +4,8 @@
 @import "lay-out";
 @import "user-form";
 @import "pages/user.scss";
-@import "pages/add.scss"
+@import "pages/add.scss";
+*{
+    font-family: "Roboto";
+    margin: 0;
+}
