@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="/style/style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="login">
+            <div class="login-container">
+                <div class="login-main">
+                    <div class="login-main__logo">
+                        <img src="images/logo-log.png" alt="logo">
+                    </div>
+                    <div class="login-main__title">
+                        <p class="p1">We’ve sent a verification code.</p>
+                        <p class="p1">Please check your email.</p>
+                    </div>
+                    <form id="resetPasswordForm"
+                        class="login-main__form">
+                        <div class="input-group">
+                            <input class="input-form" type="text"
+                                name="username" placeholder="username" />
+                            <div class="password-wrapper">
+                                <input
+                                    class="input-form"
+                                    type="password"
+                                    name="verificationCode"
+                                    placeholder="Verification Code"
+                                    class="input-pass" />
+                                <svg class="icon" click="toggleEye"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20" height="17" viewBox="0 0 20 17"
+                                    fill="none">
+                                    <path
+                                        d="M0.909091 1.62889L2.07273 0.5L17.2727 15.3622L16.1182 16.5L13.3182 13.7622C12.2727 14.1 11.1636 14.2778 10 14.2778C5.45455 14.2778 1.57273 11.5133 0 7.61111C0.627273 6.04667 1.62727 4.66889 2.9 3.57556L0.909091 1.62889ZM10 4.94444C10.7233 4.94444 11.417 5.2254 11.9285 5.72549C12.4399 6.22559 12.7273 6.90387 12.7273 7.61111C12.7277 7.91384 12.6755 8.21443 12.5727 8.5L9.09091 5.09556C9.38297 4.9951 9.69039 4.944 10 4.94444ZM10 0.944444C14.5455 0.944444 18.4273 3.70889 20 7.61111C19.2576 9.45372 17.9969 11.0532 16.3636 12.2244L15.0727 10.9533C16.33 10.1031 17.3439 8.95254 18.0182 7.61111C17.2833 6.14432 16.1423 4.90856 14.7249 4.04431C13.3074 3.18007 11.6704 2.72201 10 2.72222C9.00909 2.72222 8.03636 2.88222 7.12727 3.16667L5.72727 1.80667C7.03636 1.25556 8.48182 0.944444 10 0.944444ZM1.98182 7.61111C2.71668 9.0779 3.85769 10.3137 5.27512 11.1779C6.69256 12.0422 8.32956 12.5002 10 12.5C10.6273 12.5 11.2455 12.4378 11.8182 12.3133L9.74545 10.2778C9.11287 10.2115 8.52257 9.93544 8.0727 9.49558C7.62284 9.05571 7.34053 8.47852 7.27273 7.86L4.18182 4.82889C3.28182 5.58444 2.52727 6.52667 1.98182 7.61111Z"
+                                        fill="#808080" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="login-form__options">
+                            <div class="login-form__options-remember">
+                                <span>Time Remaining: </span>
+                                <span id="time"> </span>
+                            </div>
+                            <div class="login-form__options-forgot">
+                                <a href="forgot">Resend Code</a>
+
+                            </div>
+                        </div>
+                        <div class="login-form__btn-group">
+                            <a href="login.html" class="custom-btn cancel">Cancel</a>
+                            <button type="submit" class="custom-btn verify">Verify</button>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+    <script>
+        document.querySelector('.cancel').addEventListener('click', function () {
+            window.location.href = 'login.html';
+        });
+    </script>
+    <script>
+        function startCountdown(duration, display) {
+            let timer = duration, minutes, seconds;
+            const interval = setInterval(() => {
+                minutes = Math.floor(timer / 60);
+                seconds = timer % 60;
+                seconds = seconds < 10 ? '0' + seconds : seconds;
+                display.textContent = minutes + ":" + seconds;
+    
+                if (--timer < 0) {
+                    clearInterval(interval); 
+                    window.location.href = 'login.html';
+                }
+            }, 1000);
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const oneMinute = 60; 
+            const display = document.getElementById('time');
+            startCountdown(oneMinute, display);
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.password-wrapper').forEach(wrapper => {
+            const input = wrapper.querySelector('.input-form');
+            const icon = wrapper.querySelector('.icon');
+            if(icon && input) {
+              console.log(icon);
+                icon.addEventListener('click', () => {
+              if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.add('active');
+              } else {
+                input.type = 'password';
+                icon.classList.remove('active');
+              }
+            });
+            }
+          });
+          document.getElementById('resetPasswordForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+      
+            const username = this.username.value;
+            const verificationCode = this.verificationCode.value;
+      
+            if(username === '') {
+              alert('Please enter a user name.');
+              return;
+          }
+          if(verificationCode === '') {
+            alert('Please enter a verification Code.');
+            return;
+        }
+        
+          alert('Password reset successful!');
+          window.location.href = 'user.html';
+          });
+    </script>
+</html>

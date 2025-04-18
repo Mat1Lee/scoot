@@ -1,0 +1,130 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--Pastel-Blue, #e8f8f8);
+    height: 100vh;
+    &-main {
+        display: flex;
+        width: 384px;
+        padding: 34px;
+        flex-direction: column;
+        // align-items: center;
+        gap: 34px;
+        flex-shrink: 0;
+        border-radius: 4px;
+        background: #f8f8f8;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+        &__logo {
+            width: 100%;
+            height: auto;
+        }
+        &__title {
+            display: flex;
+            flex-direction: column;
+            gap:4px;
+            .p1 {
+                margin: 0;
+            }
+        }
+        &__form {
+            overflow: hidden;
+            .input-group {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .input-form {
+                width: 100%;
+                display: flex;
+                height: 43px;
+                padding: 10px;
+                align-items: center;
+                gap: 10px;
+                flex-shrink: 0;
+                align-self: stretch;
+                border-radius: 3px;
+                background: #fff;
+                color: var(--Light-Grey, #44424b);
+
+                /* H3 */
+                font-family: "Roboto";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                outline: none;
+                border: none;
+
+                &::placeholder {
+                    color: #d9d9d9;
+                    text-transform: capitalize;
+                }
+            }
+            .password-wrapper {
+                position: relative;
+            }
+            .icon {
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+            }
+            .custom-btn {
+                text-align: center;
+                margin: 0 auto;
+                background-color: #11acc1;
+                color: white;
+            }
+        }
+    }
+
+}
+.login-form {
+    &__options {
+        display: flex;
+        justify-content: space-between;
+        gap: 49px;
+        align-items: center;
+        margin: 34px 0;
+        margin-top: 20px;
+        &-remember {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .remember {
+                width: max-content;
+              
+                width: 20px;
+                height: 20px;
+                margin: 0 !important;
+            }
+        }
+        &-forgot {
+            a {
+                color: var(--Primary, #11acc1);
+                text-decoration: none;
+                /* P1 */
+                font-family: "Roboto";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+    }
+    &__btn-group{
+        display: flex;
+        flex-direction: row;
+        gap:16px;
+        justify-content: space-between;
+        
+    }
+    .custom-btn{
+        .submit{
+            margin-top:34px;
+        }
+    }
+    
+}

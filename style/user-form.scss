@@ -1,0 +1,130 @@
+$primary-color: #FFF;
+$border-color: #e9ecef;
+$text-color: #44424B;
+$placeholder-color: #D9D9D9;
+$focus-color: #808080;
+$font-family: "Roboto";
+$form-bg-color: white;
+$body-bg-color: #f5f5f5;
+
+.user-form {
+    width: 100%;
+    margin-top:34px;
+    form{
+        display: flex;
+        flex-direction: column;
+        gap:25px;
+    }
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+    //   margin-bottom: 20px;
+       gap:25px;
+      .form-group {
+        flex: 1;
+        min-width: 300px;
+        // margin-right: 20px;
+        // margin-bottom: 10px;
+       
+        
+        &:last-child {
+          margin-right: 0;
+        }
+        
+        label {
+            display: block;
+            font-family: $font-family;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 15px;
+            color: $text-color;
+        }
+        
+        .form-control {
+          position: relative;
+          
+          input, select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid $border-color;
+            border-radius: 4px;
+            font-family: $font-family;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: $text-color;
+            background-color: $primary-color;
+            transition: border-color 0.2s ease;
+            outline: none;
+            border:none;
+            
+            &::placeholder {
+              color: $placeholder-color;
+            }
+            
+            &:focus {
+              outline: $focus-color;
+              border-color: $focus-color;
+            }
+          }
+          
+          select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23495057' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 16px;
+            padding-right: 40px;
+            &.country-code{
+                width: 70px;
+            }
+          }
+        }
+        
+        .phone-input {
+          display: flex;
+          
+          #country-code {
+            width: 80px;
+            margin-right: 10px;
+            text-align: center;
+          }
+        }
+        
+        .password-input {
+          position: relative;
+          
+          .toggle-password {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: $placeholder-color;
+            
+            svg {
+              width: 18px;
+              height: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Media query using SCSS
+  @media (max-width: 768px) {
+    .registration-form {
+      .form-row {
+        .form-group {
+          min-width: 100%;
+          margin-right: 0;
+        }
+      }
+    }
+  }

@@ -1,0 +1,12 @@
+.main-content{
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+.button-group{
+    display: flex;
+    justify-content: space-between;
+    gap:25px;
+}

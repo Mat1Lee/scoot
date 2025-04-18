@@ -1,0 +1,17 @@
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    margin-left:281px;
+    padding:34px;
+    background-color: #F8F8F8;
+    transition: all 0.2s ease-in-out;
+    @media screen and (max-width:768px){
+        margin-left: 80px;
+    }
+
+}

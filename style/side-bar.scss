@@ -1,0 +1,187 @@
+// _variables.scss
+// Colors
+$primary-color: #00a6ca;
+$secondary-color: #f5f5f5;
+$text-color: #333;
+$light-text: #666;
+$white: #fff;
+$border-color: #e1e1e1;
+$hover-bg: #f0f9fb;
+$divider-bg: #f0f0f0;
+
+// Sizing
+$sidebar-width: 281px;
+$header-height: 60px;
+$border-radius: 4px;
+
+// Typography
+$font-family: "Roboto";
+$font-size-base: 14px;
+$font-size-small: 12px;
+$font-size-large: 16px;
+
+// Spacing
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// Transitions
+$transition-speed: 0.3s;
+
+// _sidebar.scss
+.sidebar {
+    width: $sidebar-width;
+    height: 100vh;
+    background: var(--Pastel-Blue, #E8F8F8);
+    border-right: 1px solid $border-color;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    padding:30px 0;
+    transition: all 0.2s ease-in-out;
+    .logo {
+        padding: $spacing-md;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border-bottom: 1px solid $border-color;
+        
+        img {
+            height: 24px;
+            margin-right: $spacing-xs;
+        }
+        
+        span {
+            font-weight: 600;
+            font-size: $font-size-large;
+            color: $primary-color;
+        }
+    }
+    
+    .user-profile {
+        padding: $spacing-md;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin:20px 0;
+        &:hover {
+            background-color: $hover-bg;
+        }
+        
+        .user-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: $primary-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: $spacing-sm;
+            
+        }
+        
+        .user-info {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            .user-name {
+                font-size: $font-size-base;
+                font-weight: 500;
+            }
+            
+            i {
+                color: $light-text;
+                font-size: $font-size-small;
+            }
+        }
+    }
+    
+    .divider {
+        padding: $spacing-xs $spacing-md;
+        background-color: $divider-bg;
+        color: $light-text;
+        font-size: $font-size-small;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+    
+    .nav-menu {
+        flex: 1;
+     
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            margin-top:20px;
+            .nav-item {
+                a {
+                    height: 50px;
+                    padding: 15px 25px;
+                    display: flex;
+                    align-items: center;
+                    color: $text-color;
+                    text-decoration: none;
+                    align-self: stretch;
+                    position: relative;
+                    gap:15px;
+                    
+                    i {
+                        width: 20px;
+                        text-align: center;
+                        margin-right: $spacing-sm;
+                        
+                        &.arrow {
+                            position: absolute;
+                            right: $spacing-md;
+                            margin-right: 0;
+                            color: $light-text;
+                            font-size: $font-size-small;
+                        }
+                    }
+                    
+                    h3 {
+                        flex: 1;
+                        color: var(--Dark-Grey, #44424B);
+                        margin:0;
+                        /* H3 */
+                        font-family: "Roboto";
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                    
+                    &:hover {
+                        background-color: $hover-bg;
+                    }
+                }
+                
+                &.active {
+                    a {
+                        background-color: $hover-bg;
+                        color: $primary-color;
+                        border-left: 3px solid $primary-color;
+                        
+                        i:not(.arrow) {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:768px){
+        width: 80px;
+    }
+}
