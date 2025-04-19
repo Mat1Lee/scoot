@@ -11,6 +11,7 @@
     padding:34px;
     background-color: #F8F8F8;
     transition: all 0.2s ease-in-out;
+    overflow-x: hidden;
     @media screen and (max-width:768px){
         margin-left: 80px;
     }

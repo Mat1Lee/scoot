@@ -75,6 +75,10 @@
         </aside>
         <main class="main-content">
            <div class="main-content__top">
+            <div class="burger-menu" id="burger-menu">
+              <i class="fas fa-bars"></i>
+            </div>
+
             <h1 class="title">
                 Edit User
             </h1>
@@ -99,12 +103,33 @@
                 <div class="form-group">
                   <label for="userRole">User Role</label>
                   <div class="form-control">
-                    <select id="userRole">
+                    <!-- <select id="userRole">
                       <option value="" selected disabled>User Role</option>
                       <option value="admin">Admin</option>
                       <option value="user">User</option>
                       <option value="moderator">Moderator</option>
-                    </select>
+                    </select> -->
+                    <div class="fill-input" id="customSelectRole">
+                        <div class="select-header" onclick="toggleDropdown('dropdownRole')">
+                            <span id="userRole"  class="placeholder active">User Role</span>
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
+                                <path d="M7.24609 9L0.750903 0.75L13.7413 0.750001L7.24609 9Z" fill="#44424B"/>
+                            </svg>
+                        </div>
+                        <div class="dropdown" id="dropdownRole">
+                            <div class="dropdown-item" onclick="selectOption('Admin', 'userRole', 'dropdownRole')">
+                                <div class="el-val">Admin</div>
+                            </div>
+                            <div class="dropdown-item" onclick="selectOption('User', 'userRole', 'dropdownRole')">
+                                <div class="el-val">User</div>
+                            </div>
+                            <div class="dropdown-item" onclick="selectOption('Viewer', 'userRole', 'dropdownRole')">
+                                <div class="el-val">Viewer</div>
+                            </div>
+
+                        </div>
+                    </div>
+                   
                   </div>
                 </div>
               </div>
@@ -120,12 +145,14 @@
                   <label for="contact">Contact</label>
                   <div class="form-control phone-input">
                     <!-- <input type="text" class="country-code" value="65" readonly> -->
+                    <div class="select-wrapper">
                     <select cllass="country-code" id="country-code">
-                        <option value="65" selected disabled>65</option>
+                        <option value="65" selected >65</option>
                         <option value="84">84</option>
                         <option value="66">66</option>
                         <option value="68">68</option>
                       </select>
+                      </div>
                     <input type="tel" id="contact" placeholder="9123 4567">
                   </div>
                 </div>
@@ -208,6 +235,7 @@
           email: "johntan@gmail.com",
           contact: "9090 1010",
           role: "Admin",
+          code:65,
           lastLogin: "05/12/2024 10:00 AM",
           enabled: true
       },
@@ -217,6 +245,7 @@
           email: "lilylily@yahoo.com",
           contact: "8765 1065",
           role: "Viewer",
+          code:65,
           lastLogin: "05/12/2024 10:00 AM",
           enabled: true
       },
@@ -226,6 +255,7 @@
           email: "cherylngng@gmail.com",
           contact: "9763 1234",
           role: "Viewer",
+          code:65,
           lastLogin: "05/12/2024 10:00 AM",
           enabled: false
       }
@@ -242,7 +272,7 @@
           console.log(item,'Itemmmmm')
         if(item.name){
                document.getElementById('userName').value = item.name;
-                document.getElementById('userRole').value = item.role;
+                document.getElementById('userRole').textContent = item.role;
                 document.getElementById('email').value = item.email;
                 document.getElementById('country-code').value = item.code;
                 document.getElementById('contact').value = item.contact;
@@ -323,14 +353,60 @@
             return;
         }
 
-        // Nếu không có lỗi
         alert('User updated successfully!');
     });
 
-    // Hàm kiểm tra định dạng email
     function validateEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
+</script>
+<script>
+  function toggleDropdown(dropdownId) {
+      const dropdown = document.getElementById(dropdownId);
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+  }
+
+  function selectOption(value, selectedValueId, dropdownId) {
+      const selectedValue = document.getElementById(selectedValueId);
+      const dropdown = document.getElementById(dropdownId);
+      selectedValue.textContent = value;
+      selectedValue.classList.add('active')
+      dropdown.style.display = "none";
+  }
+
+  document.addEventListener("click", (event) => {
+      const customSelectRole = document.getElementById("customSelectRole");
+     
+      const dropdownRole = document.getElementById("dropdownRole");
+      
+
+      if (!customSelectRole.contains(event.target)) {
+          dropdownRole.style.display = "none";
+      }
+     
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded');
+    const burger = document.getElementById('burger-menu');
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.createElement('div');
+    overlay.classList.add('sidebar-overlay');
+    document.body.appendChild(overlay);
+
+    burger.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+   
+      overlay.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+     
+      overlay.classList.remove('active');
+    });
+  });
 </script>
 </html>
