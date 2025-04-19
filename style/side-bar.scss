@@ -64,7 +64,9 @@ $transition-speed: 0.3s;
             
             .user-name {
                 font-size: 20px;
-                font-weight: 500;
+                margin-left: 15px;
+                font-weight: 400;
+                color: var(--Dark-Grey, #44424B);
             }
             
         }
@@ -72,10 +74,25 @@ $transition-speed: 0.3s;
     
     .divider {
         padding: 15px 25px;
-        background-color: transparent;
-
+        background-color: #E8F8F8;
         font-weight: 500;
         letter-spacing: 0.5px;
+        display: flex
+    ;
+        color: var(--Grey, #808080);
+        font-family: Roboto;
+        font-size: 18px;
+        gap: 5px;
+        align-items: center;
+        &::after {
+            content: "";
+            display: block;
+            width:45%;
+            border-bottom: 1px solid #808080;
+        }
+        small{
+            font-size: 12px;
+        }
     }
     
     .nav-menu {

@@ -281,14 +281,14 @@
             background-color: rgba(217, 217, 217, 1);
             transition: 0.3s;
             border-radius: 24px;
-
+            // transform: translateY(-50%);
             &:before {
                 position: absolute;
                 content: "";
                 height: 24px;
                 width: 24px;
                 left: 0px;
-                bottom: -3px;
+                bottom: -4px;
                 // transform: translateY(-50%);
                 border: 0.2px solid white;
                 background-color: rgba(217, 217, 217, 1);

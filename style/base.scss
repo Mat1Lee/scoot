@@ -91,7 +91,7 @@ label{
     display: flex;
     height: 36px;
     padding: 9px 18px;
-    justify-content: flex-end;
+    justify-content:center;
     align-items: center;
     gap: 10px;
     border-radius: 3px;
@@ -99,6 +99,8 @@ label{
     color:white;
     text-decoration: none;
     cursor: pointer;
+    min-width: 93px;
+
 }
 .btn-cancel{
     display: flex;
@@ -110,6 +112,8 @@ label{
     background: var(--Light-Grey, #D9D9D9);
     color:#44424B;
     cursor: pointer;
+    min-width: 93px;
+
 }
 input[type="checkbox"]{
   
