@@ -87,6 +87,9 @@ ul{
 label{
     font-family: $font-family;
 }
+a{
+    text-decoration: none;
+}
 .btn-add{
     display: flex;
     height: 36px;

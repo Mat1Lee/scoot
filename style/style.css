@@ -213,6 +213,10 @@ label {
   font-family: "Roboto";
 }
 
+a {
+  text-decoration: none;
+}
+
 .btn-add {
   display: flex;
   height: 36px;
@@ -1038,12 +1042,6 @@ input[type=checkbox] {
 * {
   font-family: "Roboto";
   margin: 0;
-}
-
-elect {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 
 /*# sourceMappingURL=style.css.map */
