@@ -24,12 +24,12 @@
                         class="login-main__form">
                         <div class="input-group">
                             <input class="input-form" type="text"
-                                v-model="username" placeholder="username" />
+                                name="username" placeholder="username" />
                             <div class="password-wrapper">
                                 <input
                                     class="input-form"
                                     type="password"
-                                    v-model="password"
+                                    name="password"
                                     placeholder="password"
                                     class="input-pass" />
                                 <svg class="icon" 
@@ -78,5 +78,24 @@
             });
             }
           });
+    </script>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); 
+            const username = document.querySelector('input[name="username"]').value.trim();
+            const password = document.querySelector('input[name="password"]').value.trim();
+
+            if (!username || !password) {
+                alert("Please enter both username and password. userName : addmin,password : 123456 ");
+                return;
+            }
+            if (username === "admin" && password === "123456") {
+                alert("Login successful!");
+                window.location.href = "user.html";
+            } else {
+                alert("Invalid username or password.");
+            }
+        }
+        document.querySelector('.login-main__form').addEventListener('submit', handleLogin);
     </script>
 </html>

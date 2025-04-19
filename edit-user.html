@@ -200,14 +200,14 @@
     }
 </script>
 <script>
-    document.querySelectorAll('.form-row').forEach(wrapper => {
+    document.querySelectorAll('.form-group').forEach(wrapper => {
         const input = wrapper.querySelector('.password');
-        const icon = wrapper.querySelector('.toggle-password');
+        const icon = wrapper.querySelector('.toggle-password');console.log(icon,'asdasds');
         if(icon && input) {
-          console.log(icon);
+          
             icon.addEventListener('click', () => {
           if (input.type === 'password') {
-            input.type = '*';
+            input.type = 'text';
             icon.classList.add('active');
           } else {
             input.type = 'password';
@@ -229,6 +229,7 @@
           role: "Admin",
           code:65,
           lastLogin: "05/12/2024 10:00 AM",
+          password: "123456",
           enabled: true
       },
       {
@@ -239,6 +240,7 @@
           role: "Viewer",
           code:65,
           lastLogin: "05/12/2024 10:00 AM",
+          password: "123456",
           enabled: true
       },
       {
@@ -249,6 +251,7 @@
           role: "Viewer",
           code:65,
           lastLogin: "05/12/2024 10:00 AM",
+          password: "123456",
           enabled: false
       }
 
@@ -269,7 +272,7 @@
                 document.getElementById('country-code').value = item.code;
                 document.getElementById('contact').value = item.contact;
                 document.getElementById('password').value = item.password;
-                document.getElementById('confirmPassword').value = item.repass;
+                document.getElementById('confirmPassword').value = item.repass ?? '';
         }
  
      

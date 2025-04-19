@@ -202,12 +202,13 @@
   
 </script>
 <script>
-    document.querySelectorAll('.form-row').forEach(wrapper => {
+    document.querySelectorAll('.form-group').forEach(wrapper => {
         const input = wrapper.querySelector('.password');
         const icon = wrapper.querySelector('.toggle-password');
         if(icon && input) {
-          console.log(icon);
+         
             icon.addEventListener('click', () => {
+              console.log(icon);
           if (input.type === 'password') {
             input.type = '*';
             icon.classList.add('active');
