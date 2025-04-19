@@ -86,12 +86,12 @@
             const password = document.querySelector('input[name="password"]').value.trim();
 
             if (!username || !password) {
-                alert("Please enter both username and password. userName : addmin,password : 123456 ");
+                alert("Please enter both username and password. userName : addmin,password : 123456");
                 return;
             }
             if (username === "admin" && password === "123456") {
                 alert("Login successful!");
-                window.location.href = "user.html";
+                window.location.href = "verify.html";
             } else {
                 alert("Invalid username or password.");
             }

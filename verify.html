@@ -114,16 +114,18 @@
             const verificationCode = this.verificationCode.value;
       
             if(username === '') {
-              alert('Please enter a user name.');
+              alert('Please enter a user name. userName : addmin,verificationCode : 123456');
               return;
-          }
-          if(verificationCode === '') {
-            alert('Please enter a verification Code.');
-            return;
-        }
-        
-          alert('Password reset successful!');
-          window.location.href = 'user.html';
+             }
+            if(verificationCode === '') {
+                alert('Please enter a verification Code.');
+                return;
+            }
+            if (username === "admin" && verificationCode === "123456") {
+                alert("Verification successful!");
+                window.location.href = "user.html";
+            }
+       
           });
     </script>
 </html>
