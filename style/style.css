@@ -731,10 +731,15 @@ input[type=checkbox] {
 .table-responsive {
   overflow-x: auto;
   margin-bottom: 24px;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  min-width: 1200px;
 }
 
 .user-table {
   width: 100%;
+  min-width: 1200px;
   border-collapse: collapse;
 }
 .user-table th,
