@@ -267,14 +267,12 @@
             errors.push('Password must contain at least one number.');
         }
         if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
-            errors.push('Password must contain at least one special character (e.g., !, @, #, etc.).');
+            errors.push('Password must contain at least one special character (!@#^*_?{}-).');
         }
-        if(password === userName){
-            errors.push('Do not use your email or name')
+        if(password === userName || password === email){
+            errors.push('Do not use your email or name for password');
         }
-        if(password === email){
-            errors.push('Do not use your email or name')
-        }
+       
 
         if (password !== confirmPassword) {
             errors.push('Passwords do not match.');

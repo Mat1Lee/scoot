@@ -321,7 +321,7 @@
             errors.push('Password must contain at least one number.');
         }
         if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
-            errors.push('Password must contain at least one special character (e.g., !, @, #, etc.).');
+          errors.push('Password must contain at least one special character (!@#^*_?{}-).');
         }
         if(password === userName){
             errors.push('Do not use your email or name')

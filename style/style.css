@@ -736,20 +736,21 @@ input[type=checkbox] {
   -webkit-overflow-scrolling: touch;
 }
 
-.user-table {
+.user-table, .campaign-table {
   width: 100%;
   min-width: 1200px;
   border-collapse: collapse;
 }
 .user-table th,
-.user-table td {
+.user-table td, .campaign-table th,
+.campaign-table td {
   padding: 15px;
   text-align: left;
   font-family: "Roboto";
   color: #44424b;
   border-bottom: 1px solid #EBE9EB;
 }
-.user-table th {
+.user-table th, .campaign-table th {
   color: var(--Primary, #11acc1);
   /* H3 */
   font-family: "Roboto";
@@ -758,59 +759,60 @@ input[type=checkbox] {
   font-weight: 400;
   line-height: normal;
 }
-.user-table tbody tr:hover {
+.user-table tbody tr:hover, .campaign-table tbody tr:hover {
   background-color: #e8f8f8;
 }
-.user-table tbody tr:nth-child(even) {
+.user-table tbody tr:nth-child(even), .campaign-table tbody tr:nth-child(even) {
   background-color: #e8f8f8;
 }
 .user-table tbody tr:last-child th,
-.user-table tbody tr:last-child td {
+.user-table tbody tr:last-child td, .campaign-table tbody tr:last-child th,
+.campaign-table tbody tr:last-child td {
   border-bottom: none;
 }
-.user-table .checkbox-column {
+.user-table .checkbox-column, .campaign-table .checkbox-column {
   width: 40px;
   text-align: center;
   padding-right: 5px;
 }
-.user-table .actions-column {
+.user-table .actions-column, .campaign-table .actions-column {
   width: 100px;
   text-align: right;
   white-space: nowrap;
 }
-.user-table .action-btn {
+.user-table .action-btn, .campaign-table .action-btn {
   background: none;
   border: none;
   cursor: pointer;
 }
-.user-table .action-btn:hover {
+.user-table .action-btn:hover, .campaign-table .action-btn:hover {
   color: #11ACC1;
 }
-.user-table .action-btn.delete {
+.user-table .action-btn.delete, .campaign-table .action-btn.delete {
   margin-left: 15px;
 }
-.user-table .action-btn.delete:hover {
+.user-table .action-btn.delete:hover, .campaign-table .action-btn.delete:hover {
   color: #e74c3c;
 }
-.user-table .toggle {
+.user-table .toggle, .campaign-table .toggle {
   position: relative;
   display: inline-block;
   width: 48px;
-  height: 24px;
+  height: 16px;
 }
-.user-table .toggle input {
+.user-table .toggle input, .campaign-table .toggle input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-.user-table .toggle input:checked + .slider {
+.user-table .toggle input:checked + .slider, .campaign-table .toggle input:checked + .slider {
   background-color: #11ACC1;
 }
-.user-table .toggle input:checked + .slider:before {
+.user-table .toggle input:checked + .slider:before, .campaign-table .toggle input:checked + .slider:before {
   transform: translateX(24px);
   background-color: #11ACC1;
 }
-.user-table .toggle .slider {
+.user-table .toggle .slider, .campaign-table .toggle .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -822,7 +824,7 @@ input[type=checkbox] {
   transition: 0.3s;
   border-radius: 24px;
 }
-.user-table .toggle .slider:before {
+.user-table .toggle .slider:before, .campaign-table .toggle .slider:before {
   position: absolute;
   content: "";
   height: 24px;
@@ -834,7 +836,7 @@ input[type=checkbox] {
   transition: 0.3s;
   border-radius: 50%;
 }
-.user-table input[type=checkbox] {
+.user-table input[type=checkbox], .campaign-table input[type=checkbox] {
   width: 18px;
   height: 18px;
 }
@@ -1046,6 +1048,17 @@ input[type=checkbox] {
 * {
   font-family: "Roboto";
   margin: 0;
+}
+
+input[type=password] {
+  -webkit-text-security: square; /* Cho Safari */
+  font-family: text-security-square; /* Cho các trình duyệt khác */
+}
+
+@font-face {
+  font-family: "text-security-square";
+  src: url("path-to-font/text-security-square.eot");
+  src: url("path-to-font/text-security-square.eot?#iefix") format("embedded-opentype"), url("path-to-font/text-security-square.woff2") format("woff2"), url("path-to-font/text-security-square.woff") format("woff"), url("path-to-font/text-security-square.ttf") format("truetype");
 }
 
 /*# sourceMappingURL=style.css.map */

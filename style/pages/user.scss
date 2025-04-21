@@ -179,7 +179,7 @@
     -webkit-overflow-scrolling: touch;
     // min-width: 1200px;
 }
-.user-table {
+.user-table, .campaign-table {
     width: 100%;
     min-width: 1200px;
     border-collapse: collapse;
@@ -255,7 +255,7 @@
         position: relative;
         display: inline-block;
         width: 48px;
-        height: 24px;
+        height: 16px;
 
         input {
             opacity: 0;
