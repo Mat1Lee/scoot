@@ -393,10 +393,13 @@
 
   document.addEventListener("click", (event) => {
       const customSelectRole = document.getElementById("customSelectRole");
-     
+      const customSelectCode = document.getElementById("customSelectPhone");
       const dropdownRole = document.getElementById("dropdownRole");
+      const dropdownCode = document.getElementById("dropdownCode");
       
-
+      if (!customSelectCode.contains(event.target)) {
+          dropdownCode.style.display = "none";
+      }
       if (!customSelectRole.contains(event.target)) {
           dropdownRole.style.display = "none";
       }

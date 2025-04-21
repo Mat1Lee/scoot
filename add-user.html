@@ -138,12 +138,26 @@
                   <div class="form-control phone-input">
                     <!-- <input type="text" class="country-code" value="65" readonly> -->
                     <div class="select-wrapper">
-                    <select cllass="country-code" id="country-code">
-                        <option value="65" selected >65</option>
-                        <option value="84">84</option>
-                        <option value="66">66</option>
-                        <option value="68">68</option>
-                      </select>
+                      <div class="fill-input" id="customSelectPhone">
+                        <div class="select-header" onclick="toggleDropdown('dropdownCode')">
+                            <span id="userCode" name="userCode"  class="placeholder active">65</span>
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
+                                <path d="M7.24609 9L0.750903 0.75L13.7413 0.750001L7.24609 9Z" fill="#44424B"/>
+                            </svg>
+                        </div>
+                        <div class="dropdown" id="dropdownCode">
+                            <div class="dropdown-item" onclick="selectOption('66', 'userCode', 'dropdownCode')">
+                                <div class="el-val">66</div>
+                            </div>
+                            <div class="dropdown-item" onclick="selectOption('68', 'userCode', 'dropdownCode')">
+                                <div class="el-val">68</div>
+                            </div>
+                            <div class="dropdown-item" onclick="selectOption('70', 'userCode', 'dropdownCode')">
+                                <div class="el-val">70</div>
+                            </div>
+
+                        </div>
+                    </div>
                       </div>
                     <input type="tel" id="contact" placeholder="9123 4567">
                   </div>
@@ -315,16 +329,19 @@
   }
 
   document.addEventListener("click", (event) => {
-      const customSelectRole = document.getElementById("customSelectRole");
-     
-      const dropdownRole = document.getElementById("dropdownRole");
-      
-
-      if (!customSelectRole.contains(event.target)) {
-          dropdownRole.style.display = "none";
-      }
-     
-  });
+    const customSelectRole = document.getElementById("customSelectRole");
+    const customSelectCode = document.getElementById("customSelectPhone");
+    const dropdownRole = document.getElementById("dropdownRole");
+    const dropdownCode = document.getElementById("dropdownCode");
+    
+    if (!customSelectCode.contains(event.target)) {
+        dropdownCode.style.display = "none";
+    }
+    if (!customSelectRole.contains(event.target)) {
+        dropdownRole.style.display = "none";
+    }
+   
+});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {

@@ -86,8 +86,9 @@ $body-bg-color: #f5f5f5;
         
         .phone-input {
           display: flex;
+          gap:25px;
           .fill-input{
-            margin-right:25px;
+            // margin-right:25px;
             .select-header{
               .icon{
                 margin-left:10px;

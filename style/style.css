@@ -520,9 +520,7 @@ input[type=checkbox] {
 }
 .user-form .form-row .form-group .phone-input {
   display: flex;
-}
-.user-form .form-row .form-group .phone-input .fill-input {
-  margin-right: 25px;
+  gap: 25px;
 }
 .user-form .form-row .form-group .phone-input .fill-input .select-header .icon {
   margin-left: 10px;

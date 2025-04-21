@@ -1,3 +1,4 @@
+//nav-active
 const navItems = document.querySelectorAll('.nav-item');
 navItems.forEach(item => {
     item.addEventListener('click', () => {
@@ -10,6 +11,7 @@ const navItem = document.querySelector(`.nav-item a[href="${slugPage}"]`);
 if(navItem){
     navItem.classList.add('active');
 };
+//select
 function toggleDropdown(dropdownId) {
     const dropdown = document.getElementById(dropdownId);
     dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
