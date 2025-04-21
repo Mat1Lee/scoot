@@ -521,6 +521,15 @@ input[type=checkbox] {
 .user-form .form-row .form-group .phone-input {
   display: flex;
 }
+.user-form .form-row .form-group .phone-input .fill-input {
+  margin-right: 25px;
+}
+.user-form .form-row .form-group .phone-input .fill-input .select-header .icon {
+  margin-left: 10px;
+}
+.user-form .form-row .form-group .phone-input .fill-input .dropdown-item {
+  justify-content: center;
+}
 .user-form .form-row .form-group .phone-input #country-code {
   width: 80px;
   margin-right: 10px;
@@ -676,6 +685,7 @@ input[type=checkbox] {
   border-radius: 3px;
   background: var(--Light-Grey, #d9d9d9);
   color: #44424b;
+  cursor: pointer;
 }
 @media screen and (max-width: 1280px) {
   .user-main__list-top {
@@ -730,7 +740,6 @@ input[type=checkbox] {
 
 .table-responsive {
   overflow-x: auto;
-  margin-bottom: 24px;
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -1051,8 +1060,8 @@ input[type=checkbox] {
 }
 
 input[type=password] {
-  -webkit-text-security: square; /* Cho Safari */
-  font-family: text-security-square; /* Cho các trình duyệt khác */
+  -webkit-text-security: square;
+  font-family: text-security-square;
 }
 
 @font-face {

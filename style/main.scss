@@ -11,8 +11,8 @@
     margin: 0;
 }
 input[type="password"] {
-    -webkit-text-security: square; /* Cho Safari */
-    font-family: text-security-square; /* Cho các trình duyệt khác */
+    -webkit-text-security: square; 
+    font-family: text-security-square; 
   }
   
   @font-face {
