@@ -103,7 +103,7 @@
                     </select> -->
                     <div class="fill-input" id="customSelectRole">
                         <div class="select-header" onclick="toggleDropdown('dropdownRole')">
-                            <span id="userRole"  class="placeholder active">User Role</span>
+                            <span id="userRole" name="userRole"  class="placeholder active">User Role</span>
                             <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
                                 <path d="M7.24609 9L0.750903 0.75L13.7413 0.750001L7.24609 9Z" fill="#44424B"/>
                             </svg>
@@ -281,7 +281,7 @@
         event.preventDefault();
 
         const userName = document.getElementById('userName').value.trim();
-        const userRole = document.getElementById('userRole').value;
+        const userRole = document.getElementById('userRole').textContent.trim();
         const email = document.getElementById('email').value.trim();
         const contact = document.getElementById('contact').value.trim();
         const password = document.getElementById('password').value;
@@ -367,6 +367,7 @@
       const dropdown = document.getElementById(dropdownId);
       selectedValue.textContent = value;
       selectedValue.classList.add('active')
+      error
       dropdown.style.display = "none";
   }
 
@@ -404,4 +405,5 @@
     });
   });
 </script>
+<
 </html>
