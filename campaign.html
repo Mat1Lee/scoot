@@ -72,7 +72,7 @@
                 <i class="fas fa-bars"></i>
               </div>
   
-            <h1 class="title">Users</h1>
+            <h1 class="title">Campaigns</h1>
             <div class="user-main">
                 <div class="user-main__list">
                     <div class="user-main__list-top">
@@ -84,48 +84,15 @@
                                   </svg>
                             </div>
                             <div class="list-filter__item">
-                                <div class="fill-input" id="customSelectRole">
-                                    <div class="select-header" onclick="toggleDropdown('dropdownRole')">
-                                        <span id="selectedValueRole" class="placeholder">Select Role</span>
-                                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
-                                            <path d="M7.24609 9L0.750903 0.75L13.7413 0.750001L7.24609 9Z" fill="#44424B"/>
-                                        </svg>
-                                    </div>
-                                    <div class="dropdown" id="dropdownRole">
-                                        <div class="dropdown-item" onclick="selectOption('Admin', 'selectedValueRole', 'dropdownRole')">
-                                            <div class="el-val">Admin</div>
-                                        </div>
-                                        <div class="dropdown-item" onclick="selectOption('User', 'selectedValueRole', 'dropdownRole')">
-                                            <div class="el-val">User</div>
-                                        </div>
-                                        <div class="dropdown-item" onclick="selectOption('Moderator', 'selectedValueRole', 'dropdownRole')">
-                                            <div class="el-val">Moderator</div>
-                                        </div>
-                                    </div>
+                                <div class="list-filter__item">
+                                    <input class="fill-input" name="query" type="date"  placeholder="Search User">
+                                    
                                 </div>
                             </div>
-                            
-                            <div class="list-filter__item">
-                                <div class="fill-input" id="customSelectStatus">
-                                    <div class="select-header" onclick="toggleDropdown('dropdownStatus')">
-                                        <span id="selectedValueStatus" class="placeholder">Select Enabled/Disabled User</span>
-                                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
-                                            <path d="M7.24609 9L0.750903 0.75L13.7413 0.750001L7.24609 9Z" fill="#44424B"/>
-                                        </svg>
-                                    </div>
-                                    <div class="dropdown" id="dropdownStatus">
-                                        <div class="dropdown-item" onclick="selectOption('Enable', 'selectedValueStatus', 'dropdownStatus')">
-                                            <div class="el-val">Enable</div>
-                                        </div>
-                                        <div class="dropdown-item" onclick="selectOption('Disable', 'selectedValueStatus', 'dropdownStatus')">
-                                            <div class="el-val">Disable</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                       
                         </div>
                         <div class="list-actions">
-                            <a href="/add-user.html" class="list-actions__add">
+                            <a href="/add-campaign.html" class="list-actions__add">
                               <span class="plus">
                                 +
                               </span>

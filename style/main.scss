@@ -23,3 +23,10 @@ input[type="password"] {
          url('path-to-font/text-security-square.woff') format('woff'),
          url('path-to-font/text-security-square.ttf') format('truetype');
   }
+  input[type="date"] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+    position: relative;
+  }
+  

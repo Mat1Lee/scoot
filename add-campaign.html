@@ -1,0 +1,340 @@
+<!-- HTML cho sidebar -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Channel Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Font Awesome cho icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+      
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="images/logo-side.png" alt="Clear Channel">
+            </div>
+            <div class="user-profile">
+                <div class="user-avatar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 23.5C17.8514 23.5 23 18.3514 23 12C23 5.64855 17.8514 0.5 11.5 0.5C5.14855 0.5 0 5.64855 0 12C0 18.3514 5.14855 23.5 11.5 23.5ZM14.95 9.7C14.95 10.615 14.5865 11.4925 13.9395 12.1395C13.2925 12.7865 12.415 13.15 11.5 13.15C10.585 13.15 9.70748 12.7865 9.06048 12.1395C8.41348 11.4925 8.05 10.615 8.05 9.7C8.05 8.785 8.41348 7.90748 9.06048 7.26048C9.70748 6.61348 10.585 6.25 11.5 6.25C12.415 6.25 13.2925 6.61348 13.9395 7.26048C14.5865 7.90748 14.95 8.785 14.95 9.7ZM4.6 17.75C5.40271 16.6781 6.44433 15.8081 7.64211 15.2092C8.8399 14.6103 10.1608 14.299 11.5 14.3C12.8392 14.299 14.1601 14.6103 15.3579 15.2092C16.5557 15.8081 17.5973 16.6781 18.4 17.75C17.5973 18.8219 16.5557 19.6919 15.3579 20.2908C14.1601 20.8897 12.8392 21.201 11.5 21.2C10.1608 21.201 8.8399 20.8897 7.64211 20.2908C6.44433 19.6919 5.40271 18.8219 4.6 17.75Z" fill="#44424B"/>
+                      </svg>
+                </div>
+                <div class="user-info">
+                    <h3 class="user-name">John Tan</h3>
+                    
+                </div>
+            </div>
+            <div class="divider"><span>LOOKER <small>PRO</small></span></div>
+            <nav class="nav-menu">
+                <ul>
+                    
+                    <li class="nav-item">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" viewBox="0 0 23 20" fill="none">
+                                <path d="M21.2308 0.142822H1.76923C1.3 0.142822 0.849991 0.331644 0.518196 0.667748C0.1864 1.00385 0 1.45971 0 1.93503V18.0649C0 18.5402 0.1864 18.9961 0.518196 19.3322C0.849991 19.6683 1.3 19.8571 1.76923 19.8571H21.2308C21.7 19.8571 22.15 19.6683 22.4818 19.3322C22.8136 18.9961 23 18.5402 23 18.0649V1.93503C23 1.45971 22.8136 1.00385 22.4818 0.667748C22.15 0.331644 21.7 0.142822 21.2308 0.142822ZM21.2308 1.93503V6.41555H1.76923V1.93503H21.2308ZM1.76923 8.20776H7.96154V18.0649H1.76923V8.20776ZM21.2308 18.0649H9.73077V8.20776H21.2308V18.0649Z" fill="#44424B"/>
+                            </svg>
+                            <h3>Campaigns</h3>
+                            <i class="fas fa-chevron-right arrow"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="user.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="14" viewBox="0 0 23 14" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.63778 10.8247C4.38588 10.7892 4.1181 10.7692 3.83333 10.7692C1.73595 10.7692 0.564594 11.8575 0.115547 12.3997C0.0427135 12.4928 0.00383541 12.607 0.00383541 12.7249C0.00383541 12.7282 0.00383153 12.7314 0.00328391 12.7341C-1.80493e-06 12.9333 0 13.1972 0 13.4615C0 13.7588 0.245333 14 0.547619 14H4.47514C4.41326 13.8288 4.38095 13.6468 4.38095 13.4615C4.38095 12.8488 4.38095 12.1186 4.38314 11.6873C4.38314 11.3804 4.4724 11.0815 4.63778 10.8247ZM16.9762 14H6.02381C5.87869 14 5.73905 13.9435 5.63664 13.8422C5.53369 13.7415 5.47619 13.6042 5.47619 13.4615C5.47619 12.8504 5.47619 12.1235 5.47838 11.6905C5.47838 11.6895 5.47838 11.6884 5.47838 11.6873C5.47838 11.5635 5.52219 11.4439 5.6016 11.3481C6.28119 10.5851 8.33476 8.61539 11.5 8.61539C15.0825 8.61539 16.8815 10.5813 17.4318 11.3228C17.4926 11.4138 17.5238 11.5166 17.5238 11.6216V13.4615C17.5238 13.6042 17.4663 13.7415 17.3634 13.8422C17.261 13.9435 17.1213 14 16.9762 14ZM18.5249 14H22.4524C22.7547 14 23 13.7588 23 13.4615V12.7244C23 12.6054 22.96 12.4902 22.8866 12.3959C22.4354 11.8575 21.2635 10.7692 19.1667 10.7692C18.8967 10.7692 18.642 10.787 18.4022 10.8193C18.544 11.0632 18.619 11.34 18.619 11.6227V13.4615C18.619 13.6468 18.5867 13.8288 18.5249 14ZM3.83333 4.30769C2.3219 4.30769 1.09524 5.51385 1.09524 7C1.09524 8.48615 2.3219 9.69231 3.83333 9.69231C5.34476 9.69231 6.57143 8.48615 6.57143 7C6.57143 5.51385 5.34476 4.30769 3.83333 4.30769ZM19.1667 4.30769C17.6552 4.30769 16.4286 5.51385 16.4286 7C16.4286 8.48615 17.6552 9.69231 19.1667 9.69231C20.6781 9.69231 21.9048 8.48615 21.9048 7C21.9048 5.51385 20.6781 4.30769 19.1667 4.30769ZM11.5 0C9.38455 0 7.66667 1.68915 7.66667 3.76923C7.66667 5.84931 9.38455 7.53846 11.5 7.53846C13.6155 7.53846 15.3333 5.84931 15.3333 3.76923C15.3333 1.68915 13.6155 0 11.5 0Z" fill="#44424B"/>
+                              </svg>
+                            <h3>Users</h3>
+                            <i class="fas fa-chevron-right arrow"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 40 41" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 3.22217H3V14.7222H14.5V3.22217ZM37 3.22217H25.5V14.7222H37V3.22217ZM37 25.7222H25.5V37.2222H37V25.7222ZM14.5 25.7222H3V37.2222H14.5V25.7222ZM3 0.222168H0V3.22217V14.7222V17.7222H3H14.5H17.5V14.7222V3.22217V0.222168H14.5H3ZM25.5 0.222168H22.5V3.22217V14.7222V17.7222H25.5H37H40V14.7222V3.22217V0.222168H37H25.5ZM37 22.7222H40V25.7222V37.2222V40.2222H37H25.5H22.5V37.2222V25.7222V22.7222H25.5H37ZM3 22.7222H0V25.7222V37.2222V40.2222H3H14.5H17.5V37.2222V25.7222V22.7222H14.5H3Z" fill="#44424B"/>
+                              </svg>
+                            <h3>Audit Trail</h3>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+           <div class="main-content__top">
+            <div class="burger-menu" id="burger-menu">
+              <i class="fas fa-bars"></i>
+            </div>
+
+            <h1 class="title">
+                Add New Campaign
+            </h1>
+            <div class="button-group">
+                <div class="button-group__add btn-add">
+                    CREATE
+                </div>
+                <a href="user.html" class="button-group__cancel btn-cancel">
+                  CANCEL
+              </a>
+            </div>
+           </div>
+           <div class="user-form">
+            <form>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="userName">Campagin Name</label>
+                  <div class="form-control">
+                    <input type="text" id="userName" placeholder="User name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="userName">Campagin Name</label>
+                  <div class="form-control">
+                    <input type="text" id="userName" placeholder="User name">
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <div class="form-control">
+                    <input type="email" id="email" placeholder="example@email.com">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="contact">Contact</label>
+                  <div class="form-control phone-input">
+                    <!-- <input type="text" class="country-code" value="65" readonly> -->
+                    <div class="select-wrapper">
+                      <div class="fill-input" id="customSelectPhone">
+                        <div class="select-header" onclick="toggleDropdown('dropdownCode')">
+                            <span id="userCode" name="userCode"  class="placeholder active">65</span>
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
+                                <path d="M7.24609 9L0.750903 0.75L13.7413 0.750001L7.24609 9Z" fill="#44424B"/>
+                            </svg>
+                        </div>
+                        <div class="dropdown" id="dropdownCode">
+                            <div class="dropdown-item" onclick="selectOption('66', 'userCode', 'dropdownCode')">
+                                <div class="el-val">66</div>
+                            </div>
+                            <div class="dropdown-item" onclick="selectOption('68', 'userCode', 'dropdownCode')">
+                                <div class="el-val">68</div>
+                            </div>
+                            <div class="dropdown-item" onclick="selectOption('70', 'userCode', 'dropdownCode')">
+                                <div class="el-val">70</div>
+                            </div>
+
+                        </div>
+                    </div>
+                      </div>
+                    <input type="tel" id="contact" placeholder="9123 4567">
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="password">Create Password</label>
+                  <div class="form-control password-input">
+                    <input class="password" type="password" id="password" placeholder="Password">
+                    <button type="button" class="toggle-password">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none">
+                      <path d="M0.909091 1.62889L2.07273 0.5L17.2727 15.3622L16.1182 16.5L13.3182 13.7622C12.2727 14.1 11.1636 14.2778 10 14.2778C5.45455 14.2778 1.57273 11.5133 0 7.61111C0.627273 6.04667 1.62727 4.66889 2.9 3.57556L0.909091 1.62889ZM10 4.94444C10.7233 4.94444 11.417 5.2254 11.9285 5.72549C12.4399 6.22559 12.7273 6.90387 12.7273 7.61111C12.7277 7.91384 12.6755 8.21443 12.5727 8.5L9.09091 5.09556C9.38297 4.9951 9.69039 4.944 10 4.94444ZM10 0.944444C14.5455 0.944444 18.4273 3.70889 20 7.61111C19.2576 9.45372 17.9969 11.0532 16.3636 12.2244L15.0727 10.9533C16.33 10.1031 17.3439 8.95254 18.0182 7.61111C17.2833 6.14432 16.1423 4.90856 14.7249 4.04431C13.3074 3.18007 11.6704 2.72201 10 2.72222C9.00909 2.72222 8.03636 2.88222 7.12727 3.16667L5.72727 1.80667C7.03636 1.25556 8.48182 0.944444 10 0.944444ZM1.98182 7.61111C2.71668 9.0779 3.85769 10.3137 5.27512 11.1779C6.69256 12.0422 8.32956 12.5002 10 12.5C10.6273 12.5 11.2455 12.4378 11.8182 12.3133L9.74545 10.2778C9.11287 10.2115 8.52257 9.93544 8.0727 9.49558C7.62284 9.05571 7.34053 8.47852 7.27273 7.86L4.18182 4.82889C3.28182 5.58444 2.52727 6.52667 1.98182 7.61111Z" fill="#44424B"/>
+                    </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="confirmPassword">Re-enter Password</label>
+                  <div class="form-control password-input">
+                    <input class="password" type="password" id="confirmPassword" placeholder="Re-enter your password">
+                    <button type="button" class="toggle-password">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none">
+                      <path d="M0.909091 1.62889L2.07273 0.5L17.2727 15.3622L16.1182 16.5L13.3182 13.7622C12.2727 14.1 11.1636 14.2778 10 14.2778C5.45455 14.2778 1.57273 11.5133 0 7.61111C0.627273 6.04667 1.62727 4.66889 2.9 3.57556L0.909091 1.62889ZM10 4.94444C10.7233 4.94444 11.417 5.2254 11.9285 5.72549C12.4399 6.22559 12.7273 6.90387 12.7273 7.61111C12.7277 7.91384 12.6755 8.21443 12.5727 8.5L9.09091 5.09556C9.38297 4.9951 9.69039 4.944 10 4.94444ZM10 0.944444C14.5455 0.944444 18.4273 3.70889 20 7.61111C19.2576 9.45372 17.9969 11.0532 16.3636 12.2244L15.0727 10.9533C16.33 10.1031 17.3439 8.95254 18.0182 7.61111C17.2833 6.14432 16.1423 4.90856 14.7249 4.04431C13.3074 3.18007 11.6704 2.72201 10 2.72222C9.00909 2.72222 8.03636 2.88222 7.12727 3.16667L5.72727 1.80667C7.03636 1.25556 8.48182 0.944444 10 0.944444ZM1.98182 7.61111C2.71668 9.0779 3.85769 10.3137 5.27512 11.1779C6.69256 12.0422 8.32956 12.5002 10 12.5C10.6273 12.5 11.2455 12.4378 11.8182 12.3133L9.74545 10.2778C9.11287 10.2115 8.52257 9.93544 8.0727 9.49558C7.62284 9.05571 7.34053 8.47852 7.27273 7.86L4.18182 4.82889C3.28182 5.58444 2.52727 6.52667 1.98182 7.61111Z" fill="#44424B"/>
+                    </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <p class="error"
+            id="error">
+
+            </p>
+          </div>
+            
+        </main>
+    </div>
+</body>
+<script>
+    //function active 
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navItems.forEach(item => item.classList.remove('active'));
+            item.classList.add('active');
+        });
+    })
+    const slugPage = window.location.pathname;
+    const navItem = document.querySelector(`.nav-item a[href="${slugPage}"]`);
+    if(navItem){
+        navItem.classList.add('active');
+    }
+ 
+  
+</script>
+<script>
+    document.querySelectorAll('.form-group').forEach(wrapper => {
+        const input = wrapper.querySelector('.password');
+        const icon = wrapper.querySelector('.toggle-password');
+        if(icon && input) {
+         
+            icon.addEventListener('click', () => {
+              console.log(icon);
+          if (input.type === 'password') {
+            input.type = '*';
+            icon.classList.add('active');
+          } else {
+            input.type = 'password';
+            icon.classList.remove('active');
+          }
+        });
+        }
+      });
+</script>
+<script>
+   
+ 
+    document.querySelector('.btn-add').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        const userName = document.getElementById('userName').value.trim();
+        const userRole = document.getElementById('userRole').value;
+        const email = document.getElementById('email').value.trim();
+        const contact = document.getElementById('contact').value.trim();
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+
+        const errors = [];
+        if (!userName) {
+            errors.push('User Name is required.');
+        }
+
+        if (!userRole) {
+            errors.push('User Role is required.');
+        }
+
+        if (!email || !validateEmail(email)) {
+            errors.push('Please enter a valid email address.');
+        }
+
+        if (!contact || !/^\d{8}$/.test(contact)) {
+            errors.push('Please enter a valid contact number (8 digits).');
+        }
+
+        if (password.length < 10) {
+            errors.push('Password must be at least 10 characters long.');
+        }
+        
+        
+        if (!/[A-Z]/.test(password)) {
+            errors.push('Password must contain at least one uppercase letter.');
+        }
+
+        if (!/[a-z]/.test(password)) {
+            errors.push('Password must contain at least one lowercase letter.');
+        }
+
+        if (!/[0-9]/.test(password)) {
+            errors.push('Password must contain at least one number.');
+        }
+        if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+            errors.push('Password must contain at least one special character (!@#^*_?{}-).');
+        }
+        if(password === userName || password === email){
+            errors.push('Do not use your email or name for password');
+        }
+       
+
+        if (password !== confirmPassword) {
+            errors.push('Passwords do not match.');
+        }
+
+        const errorElement = document.getElementById('error');
+        errorElement.innerHTML = '';
+        if (errors.length > 0) {
+            const errorList = document.createElement('ul');
+            errors.forEach(error => {
+                const listItem = document.createElement('li');
+                listItem.textContent = error;
+                errorList.appendChild(listItem);
+            });
+            errorElement.appendChild(errorList);
+            
+            return;
+        }
+
+        alert('User updated successfully!');
+    });
+
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+</script>
+<script>
+  function toggleDropdown(dropdownId) {
+      const dropdown = document.getElementById(dropdownId);
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+  }
+
+  function selectOption(value, selectedValueId, dropdownId) {
+      const selectedValue = document.getElementById(selectedValueId);
+      const dropdown = document.getElementById(dropdownId);
+      selectedValue.classList.add('active')
+      selectedValue.textContent = value;
+      dropdown.style.display = "none";
+  }
+
+  document.addEventListener("click", (event) => {
+    const customSelectRole = document.getElementById("customSelectRole");
+    const customSelectCode = document.getElementById("customSelectPhone");
+    const dropdownRole = document.getElementById("dropdownRole");
+    const dropdownCode = document.getElementById("dropdownCode");
+    
+    if (!customSelectCode.contains(event.target)) {
+        dropdownCode.style.display = "none";
+    }
+    if (!customSelectRole.contains(event.target)) {
+        dropdownRole.style.display = "none";
+    }
+   
+});
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded');
+    const burger = document.getElementById('burger-menu');
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.createElement('div');
+    overlay.classList.add('sidebar-overlay');
+    document.body.appendChild(overlay);
+
+    burger.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+   
+      overlay.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+     
+      overlay.classList.remove('active');
+    });
+  });
+</script>
+</html>

@@ -67,7 +67,7 @@ const users = [
         enabled: false
     }
 ];
-const campaigns = [
+let campaigns = [
     {
         id:1,
         ranking:1,
@@ -194,17 +194,17 @@ function createTableCam(data) {
         const actionsCell = document.createElement("td");
         actionsCell.classList.add("actions-column");
         actionsCell.innerHTML = `
-            <button onClick="edit('${cam.id}')" class="action-btn edit">
-               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                <path d="M2.7 14.4025H6.516C6.63445 14.4032 6.75186 14.3805 6.86152 14.3357C6.97117 14.2909 7.0709 14.2249 7.155 14.1415L13.383 7.90453L15.939 5.40253C16.0234 5.31887 16.0903 5.21933 16.136 5.10965C16.1817 4.99998 16.2052 4.88234 16.2052 4.76353C16.2052 4.64472 16.1817 4.52709 16.136 4.41741C16.0903 4.30774 16.0234 4.2082 15.939 4.12453L12.123 0.263533C12.0393 0.179177 11.9398 0.112222 11.8301 0.0665307C11.7204 0.0208389 11.6028 -0.00268555 11.484 -0.00268555C11.3652 -0.00268555 11.2476 0.0208389 11.1379 0.0665307C11.0282 0.112222 10.9287 0.179177 10.845 0.263533L8.307 2.81053L2.061 9.04753C1.97759 9.13163 1.91159 9.23136 1.86681 9.34102C1.82202 9.45067 1.79932 9.56809 1.8 9.68653V13.5025C1.8 13.7412 1.89482 13.9701 2.0636 14.1389C2.23239 14.3077 2.46131 14.4025 2.7 14.4025ZM11.484 2.17153L14.031 4.71853L12.753 5.99653L10.206 3.44953L11.484 2.17153ZM3.6 10.0555L8.937 4.71853L11.484 7.26553L6.147 12.6025H3.6V10.0555ZM17.1 16.2025H0.9C0.661305 16.2025 0.432387 16.2974 0.263604 16.4661C0.0948211 16.6349 0 16.8638 0 17.1025C0 17.3412 0.0948211 17.5701 0.263604 17.7389C0.432387 17.9077 0.661305 18.0025 0.9 18.0025H17.1C17.3387 18.0025 17.5676 17.9077 17.7364 17.7389C17.9052 17.5701 18 17.3412 18 17.1025C18 16.8638 17.9052 16.6349 17.7364 16.4661C17.5676 16.2974 17.3387 16.2025 17.1 16.2025Z" fill="#44424B"/>
-                </svg>
+            <button onClick="copy('${cam.id}')" class="action-btn edit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.1767 0.206543H3.4267V0.956543V3.52304H1.5H0V5.02304V14V15.5H1.5H8.5241H10.0241V14V11.9725H12.5301H13.2801V11.2225V0.956543V0.206543H12.5301H4.1767ZM10.0241 10.4725H11.7801V1.70654H4.9267V3.52304H8.5241H10.0241V5.02304V10.4725ZM1.5 5.02304H8.5241V14H1.5V5.02304Z" fill="#44424B"/>
+            </svg>
             </button>
             <button onClick="edit('${cam.id}')" class="action-btn edit">
                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                 <path d="M2.7 14.4025H6.516C6.63445 14.4032 6.75186 14.3805 6.86152 14.3357C6.97117 14.2909 7.0709 14.2249 7.155 14.1415L13.383 7.90453L15.939 5.40253C16.0234 5.31887 16.0903 5.21933 16.136 5.10965C16.1817 4.99998 16.2052 4.88234 16.2052 4.76353C16.2052 4.64472 16.1817 4.52709 16.136 4.41741C16.0903 4.30774 16.0234 4.2082 15.939 4.12453L12.123 0.263533C12.0393 0.179177 11.9398 0.112222 11.8301 0.0665307C11.7204 0.0208389 11.6028 -0.00268555 11.484 -0.00268555C11.3652 -0.00268555 11.2476 0.0208389 11.1379 0.0665307C11.0282 0.112222 10.9287 0.179177 10.845 0.263533L8.307 2.81053L2.061 9.04753C1.97759 9.13163 1.91159 9.23136 1.86681 9.34102C1.82202 9.45067 1.79932 9.56809 1.8 9.68653V13.5025C1.8 13.7412 1.89482 13.9701 2.0636 14.1389C2.23239 14.3077 2.46131 14.4025 2.7 14.4025ZM11.484 2.17153L14.031 4.71853L12.753 5.99653L10.206 3.44953L11.484 2.17153ZM3.6 10.0555L8.937 4.71853L11.484 7.26553L6.147 12.6025H3.6V10.0555ZM17.1 16.2025H0.9C0.661305 16.2025 0.432387 16.2974 0.263604 16.4661C0.0948211 16.6349 0 16.8638 0 17.1025C0 17.3412 0.0948211 17.5701 0.263604 17.7389C0.432387 17.9077 0.661305 18.0025 0.9 18.0025H17.1C17.3387 18.0025 17.5676 17.9077 17.7364 17.7389C17.9052 17.5701 18 17.3412 18 17.1025C18 16.8638 17.9052 16.6349 17.7364 16.4661C17.5676 16.2974 17.3387 16.2025 17.1 16.2025Z" fill="#44424B"/>
                 </svg>
             </button>
-          <button class="action-btn delete" onClick="confirmDelete(${cam.id}, '${cam.name}', '${cam.ranking}')">
+          <button class="action-btn delete" onClick="confirmDelete(${cam.id}, '${cam.campaign}'')">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
             <path d="M3.36214 18C2.78786 18 2.298 17.8204 1.89257 17.4613C1.488 17.1021 1.28571 16.6672 1.28571 16.1566V2.02029H0V0.878884H5.14286V0H12.8571V0.878884H18V2.02029H16.7143V16.1566C16.7143 16.6817 16.5163 17.12 16.1203 17.4715C15.7234 17.8238 15.2293 18 14.6379 18H3.36214ZM15.4286 2.02029H2.57143V16.1566C2.57143 16.3613 2.64557 16.5295 2.79386 16.6611C2.94214 16.7928 3.13157 16.8586 3.36214 16.8586H14.6379C14.835 16.8586 15.0163 16.7855 15.1817 16.6394C15.3463 16.4926 15.4286 16.3316 15.4286 16.1566V2.02029ZM6.18171 14.5758H7.46743V4.30311H6.18171V14.5758ZM10.5326 14.5758H11.8183V4.30311H10.5326V14.5758Z" fill="#44424B"/>
             </svg>
@@ -218,14 +218,23 @@ document.addEventListener("DOMContentLoaded", () => {
     createTable(users);
     createTableCam(campaigns);            
 });
-function confirmDelete(userId, userName, userEmail) {
+function confirmDelete(userId, userName) {
+    
     const modal = document.querySelector(".model-confirm");
     const userInfo = document.getElementById("user-info");
-    userInfo.textContent = `User: ${userName} (${userEmail})`;
+    userInfo.textContent = `Campaign : ${userName} `;
     modal.style.display = "flex";
 
     const confirmButton = document.getElementById("btn-confirm");
     confirmButton.onclick = () => deleteUser(userId);
+}
+function copy(camId) {
+    console.log(camId);
+    const itemCop  = campaigns.find(cam => cam.id == camId);
+    console.log(itemCop);
+    campaigns = [...campaigns, {...itemCop,id:campaigns.length+1,campaign: `${itemCop.campaign} Copy`}];
+    createTableCam(campaigns);   
+    console.log(campaigns,'createTableCam(campaigns);   ');
 }
 function deleteUser(userId) {
     console.log(`User with ID ${userId} has been deleted.`);

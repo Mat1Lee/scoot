@@ -1067,5 +1067,11 @@ input[type=password] {
   src: url("path-to-font/text-security-square.eot");
   src: url("path-to-font/text-security-square.eot?#iefix") format("embedded-opentype"), url("path-to-font/text-security-square.woff2") format("woff2"), url("path-to-font/text-security-square.woff") format("woff"), url("path-to-font/text-security-square.ttf") format("truetype");
 }
+input[type=date] {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
+  position: relative;
+}
 
 /*# sourceMappingURL=style.css.map */
